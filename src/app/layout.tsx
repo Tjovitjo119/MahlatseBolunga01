@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import { AskBolungaAI } from "@/components/chat/ask-bolunga-ai";
 import { siteConfig } from "@/constants/site";
 
 import "./globals.css";
@@ -58,9 +59,11 @@ export const metadata: Metadata = {
         },
     },
     icons: {
-        icon: "/favicon.ico",
-        shortcut: "/favicon.ico",
-        apple: "/apple-touch-icon.png",
+        icon: [
+            { url: "/image/bf7c1a562f1d8a6d86b517a9412b1a5ce8a2d7d6.png", type: "image/png" },
+        ],
+        shortcut: "/image/bf7c1a562f1d8a6d86b517a9412b1a5ce8a2d7d6.png",
+        apple: "/image/bf7c1a562f1d8a6d86b517a9412b1a5ce8a2d7d6.png",
     },
     category: "technology",
 };
@@ -97,8 +100,8 @@ export default function RootLayout({
             {children}
         </main>
         <Footer />
+        <AskBolungaAI />
         </body>
         </html>
     );
 }
-

@@ -39,3 +39,8 @@ next-env.d.ts
 
 # OS
 Thumbs.db
+# Editor workspace files
+*.code-workspace
+
+# Editor workspace files
+*.code-workspace
