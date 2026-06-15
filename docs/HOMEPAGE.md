@@ -63,8 +63,6 @@ src/
 └── lib/
 └── utils.ts # cn() utility for class merging
 
-
-
 ---
 
 ## Homepage Section Order
@@ -82,26 +80,34 @@ src/
 ## How to Edit Content
 
 ### Change Hero Slides
+
 Edit `src/data/home.ts` → `heroSlides` array
 
 ### Change Services
+
 Edit `src/data/home.ts` → `homeServices` array  
 Icons available: Briefcase, ShieldCheck, Radio, Brain, Database, Recycle
 
 ### Change Featured Projects
+
 Edit `src/data/home.ts` → `featuredProjects` array
 
 ### Change Impact Stats
+
 Edit `src/data/home.ts` → `impactStats` array
 
 ### Change Industries
+
 Edit `src/data/home.ts` → `industries` array
 
 ### Change Company Pillars (Vision/Values/BBBEE)
+
 Edit `src/data/home.ts` → `companyPillars` array
 
 ### Change Site-Wide Config
+
 Edit `src/constants/site.ts`
+
 - Phone, email, address
 - Social media URLs
 - Navigation menu
@@ -112,6 +118,7 @@ Edit `src/constants/site.ts`
 ## How to Use Shared Components
 
 ### Button
+
 ```tsx
 <Button href="/contact" variant="primary" size="lg" arrow>
   Get Started
@@ -143,3 +150,4 @@ Props: loading, loadingText, arrow, external
     { label: "Action", href: "/action", variant: "primary" }
   ]}
 />
+```

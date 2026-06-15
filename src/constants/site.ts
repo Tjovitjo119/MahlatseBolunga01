@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Bolunga Systems",
   title: "Bolunga Systems | Enterprise Technology Solutions Across Africa",
   description:
-      "Bolunga Systems delivers enterprise-grade technology consulting, cybersecurity, telecommunications, and digital transformation solutions. Over 12 years of experience, 2600+ projects delivered across 9 countries.",
+    "Bolunga Systems delivers enterprise-grade technology consulting, cybersecurity, telecommunications, and digital transformation solutions. Over 12 years of experience, 2600+ projects delivered across 9 countries.",
   url: "https://www.bolunga.co.za",
   ogImage: "/image/og-image.jpg",
   author: "Bolunga Systems",
@@ -40,9 +40,11 @@ export const siteConfig = {
     { label: "Contact", href: "/contact" },
   ],
   services: [
-    { label: "Tech Consulting", href: "/services" },
+    { label: "Technology Consulting", href: "/technology-consulting" },
     { label: "Cybersecurity", href: "/services" },
-    { label: "Telecommunications", href: "/services" },
+    { label: "Telecommunications", href: "/telecommunications-fibre" },
+    { label: "Tracking Systems", href: "/tracking-systems" },
+    { label: "Web Development", href: "/web-development" },
     { label: "AI Training", href: "/services" },
     { label: "Database Management", href: "/services" },
     { label: "E-Waste Management", href: "/services" },

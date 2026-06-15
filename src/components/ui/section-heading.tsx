@@ -45,63 +45,63 @@ const titleSizeStyles: Record<Size, string> = {
 };
 
 export function SectionHeading({
-                                 eyebrow,
-                                 title,
-                                 accentWord,
-                                 description,
-                                 align = "center",
-                                 theme = "dark",
-                                 size = "lg",
-                                 uppercase = false,
-                                 className,
-                               }: SectionHeadingProps) {
+  eyebrow,
+  title,
+  accentWord,
+  description,
+  align = "center",
+  theme = "dark",
+  size = "lg",
+  uppercase = false,
+  className,
+}: SectionHeadingProps) {
   return (
-      <header
+    <header
+      className={cn(
+        "max-w-3xl space-y-3 md:space-y-4 mb-12 md:mb-16",
+        alignStyles[align],
+        className,
+      )}
+    >
+      {eyebrow ? (
+        <p
           className={cn(
-              "max-w-3xl space-y-3 md:space-y-4 mb-12 md:mb-16",
-              alignStyles[align],
-              className,
+            "text-sm font-semibold uppercase tracking-wider",
+            eyebrowColorStyles[theme],
           )}
-      >
-        {eyebrow ? (
-            <p
-                className={cn(
-                    "text-sm font-semibold uppercase tracking-wider",
-                    eyebrowColorStyles[theme],
-                )}
-            >
-              {eyebrow}
-            </p>
-        ) : null}
-
-        <h2
-            className={cn(
-                "font-black leading-tight tracking-tight",
-                titleSizeStyles[size],
-                titleColorStyles[theme],
-                uppercase && "uppercase tracking-widest",
-            )}
         >
-          {title}
-          {accentWord ? (
-              <>
-                <br />
-                <span className="text-[#F7941D]">{accentWord}</span>
-              </>
-          ) : null}
-        </h2>
+          {eyebrow}
+        </p>
+      ) : null}
 
-        {description ? (
-            <p
-                className={cn(
-                    "text-base md:text-lg leading-relaxed max-w-2xl",
-                    align === "center" && "mx-auto",
-                    descriptionColorStyles[theme],
-                )}
-            >
-              {description}
-            </p>
+      <h2
+        className={cn(
+          "font-black leading-tight tracking-tight",
+          titleSizeStyles[size],
+          titleColorStyles[theme],
+          uppercase && "uppercase tracking-widest",
+        )}
+      >
+        {title}
+        {accentWord ? (
+          <>
+            <br />
+            <span className="text-[#F7941D]">{accentWord}</span>
+          </>
         ) : null}
-      </header>
+      </h2>
+
+      {description ? (
+        <p
+          className={cn(
+            "text-base md:text-lg leading-relaxed max-w-2xl",
+            align === "center" && "mx-auto",
+            descriptionColorStyles[theme],
+          )}
+        >
+          {description}
+        </p>
+      ) : null}
+    </header>
   );
 }
